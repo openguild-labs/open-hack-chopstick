@@ -4,20 +4,83 @@
 
 Chopsticks is a powerful tool that allows you to create a parallel reality of your Substrate network. It's useful for testing, development, and experimentation with blockchain networks.
 
-## 📋 Prerequisites
+## 📝 Prerequisites
 
 Before we start, ensure you have the following:
 
-1. **🦀 Rust**: Install Rust (version >= 1.64) and set up your environment.
+1. **🦀 Rust**: Install Rust and set up your environment.
    - 🔧 Install Rust: [Rust Installation Guide](https://www.rust-lang.org/tools/install)
    - 🎯 Add the wasm32-unknown-unknown target:
      ```bash
      rustup target add wasm32-unknown-unknown
      ```
 
-2. **💻 Node.js and npm**: Install Node.js and npm (useful for some Substrate development tasks).
+2. **💻 Visual Studio Code (VS Code)**: Set up VS Code for Rust and Substrate development.
+   - 📥 Download and install VS Code from the [official website](https://code.visualstudio.com/).
+   - 🧩 Install the following extensions in VS Code:
+     - **🦀 Rust Extension**:
+       - 🔍 Go to the Extensions view (`Ctrl+Shift+X`).
+       - 🔎 Search for "Rust" and install the [Rust extension by rust-lang](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust).
+     - **🧬 Substrate Extension**:
+       - 🔍 In the Extensions view, search for "Substrate" and install the [Substrate extension](https://marketplace.visualstudio.com/items?itemName=paritytech.vscode-substrate).
+     - **🔬 Rust Analyzer Extension (Recommended)**:
+       - 🚀 This extension provides enhanced Rust language support, including code completion and inline error checking.
+       - 🔎 Search for "Rust Analyzer" in the Extensions view and install the [Rust Analyzer extension](https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer).
 
-3. **🧰 Development Environment**: Set up your preferred IDE (e.g., Visual Studio Code) with Rust and Substrate extensions.
+### 📦 Setup on Different Operating Systems
+
+### 🪟 Windows
+
+1. **🦀 Install Rust**:
+   - **🔄 Option 1: Native Windows Installation**
+     - 📥 Download and install Rust using the installer provided at the [official Rust website](https://www.rust-lang.org/tools/install).
+     - 🖥️ Open Command Prompt (cmd) or PowerShell and run:
+       ```bash
+       rustup target add wasm32-unknown-unknown
+       ```
+   - **🐧 Option 2: Using WSL2 (Recommended)**
+     - 🔧 Install WSL2 if you haven't already by following the [WSL installation guide](https://docs.microsoft.com/en-us/windows/wsl/install).
+     - 📦 Install a Linux distribution from the Microsoft Store (e.g., Ubuntu).
+     - 🖥️ Open your WSL2 terminal (e.g., Ubuntu) and install Rust:
+       ```bash
+       curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+       ```
+     - 🎯 After installation, add the wasm32 target:
+       ```bash
+       rustup target add wasm32-unknown-unknown
+       ```
+
+2. **🥢 Install Chopsticks**:
+   - **🔄 Option 1: Native Windows Installation**
+     - 🖥️ Open Command Prompt or PowerShell and run:
+       ```bash
+       cargo install chopsticks --git https://github.com/AcalaNetwork/chopsticks.git
+       ```
+   - **🐧 Option 2: Using WSL2**
+     - 🖥️ In your WSL2 terminal, run:
+       ```bash
+       cargo install chopsticks --git https://github.com/AcalaNetwork/chopsticks.git
+       ```
+
+3. **📦 Install Node.js and NPM** (optional, but useful for some Substrate development tasks):
+   - **🔄 Option 1: Native Windows Installation**
+     - 📥 Download the Windows installer from the [Node.js website](https://nodejs.org/) and run it.
+     - ✅ Confirm installation by running in Command Prompt:
+       ```bash
+       node -v
+       npm -v
+       ```
+   - **🐧 Option 2: Using WSL2**
+     - 🖥️ In your WSL2 terminal, install Node.js using the package manager:
+       ```bash
+       sudo apt update
+       sudo apt install nodejs npm
+       ```
+     - ✅ Confirm installation by running:
+       ```bash
+       node -v
+       npm -v
+       ```
 
 ## 🚀 Quick Start
 
