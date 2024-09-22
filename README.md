@@ -1,4 +1,4 @@
-# 🥢 Enhanced Tutorial: Simulating a Substrate-based Blockchain Network with Chopsticks
+# 🥢 Open Hack Chopstick
 
 ## 📝 Introduction
 
