@@ -27,8 +27,7 @@ Before we start, ensure you have the following:
        - 🚀 This extension provides enhanced Rust language support, including code completion and inline error checking.
        - 🔎 Search for "Rust Analyzer" in the Extensions view and install the [Rust Analyzer extension](https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer).
 
-### 📦 Setup on Different Operating Systems
-
+## 📦 Setup on Different Operating Systems 
 ### 🪟 Windows
 
 1. **🦀 Install Rust**:
@@ -81,7 +80,98 @@ Before we start, ensure you have the following:
        node -v
        npm -v
        ```
+### 🍎 macOS
 
+1. **🦀 Install Rust**:
+   - 🖥️ Open Terminal and run:
+     ```bash
+     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+     ```
+   - 🔄 Follow the on-screen instructions to complete the installation.
+   - 🎯 Add the wasm32 target:
+     ```bash
+     rustup target add wasm32-unknown-unknown
+     ```
+
+2. **🥢 Install Chopsticks**:
+   - 🖥️ In Terminal, run:
+     ```bash
+     cargo install chopsticks --git https://github.com/AcalaNetwork/chopsticks.git
+     ```
+
+3. **📦 Install Node.js and npm**:
+   - 📥 Download and install Node.js from the [official website](https://nodejs.org/).
+   - ✅ Confirm installation by running:
+     ```bash
+     node -v
+     npm -v
+     ```
+
+4. **🧰 Install Development Tools**:
+   - 💻 Install Xcode from the App Store if you haven't already.
+   - 🛠️ Install Xcode Command Line Tools:
+     ```bash
+     xcode-select --install
+     ```
+
+### 🐧 Linux
+
+1. **🦀 Install Rust**:
+   - 🖥️ Open a terminal and run:
+     ```bash
+     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+     ```
+   - 🔄 Follow the on-screen instructions to complete the installation.
+   - 🎯 Add the wasm32 target:
+     ```bash
+     rustup target add wasm32-unknown-unknown
+     ```
+
+2. **🥢 Install Chopsticks**:
+   - 🖥️ In the terminal, run:
+     ```bash
+     cargo install chopsticks --git https://github.com/AcalaNetwork/chopsticks.git
+     ```
+
+3. **📦 Install Node.js and npm**:
+   - 🖥️ Use your distribution's package manager. For Ubuntu/Debian:
+     ```bash
+     sudo apt update
+     sudo apt install nodejs npm
+     ```
+   - ✅ Confirm installation by running:
+     ```bash
+     node -v
+     npm -v
+     ```
+
+4. **🧰 Install Development Tools**:
+   - 🛠️ Install essential build tools:
+     ```bash
+     sudo apt update
+     sudo apt install build-essential
+     ```
+
+## 🚀 Additional Setup Steps
+
+After completing the OS-specific setup, follow these additional steps:
+
+1. **📥 Clone the Chopsticks Repository**:
+   ```bash
+   git clone --recurse-submodules https://github.com/AcalaNetwork/chopsticks.git
+   cd chopsticks
+   ```
+
+2. **📦 Install Dependencies**:
+   ```bash
+   yarn
+   ```
+
+3. **🏗️ Build WebAssembly**:
+   ```bash
+   yarn build-wasm
+   ```
+   
 ## 🚀 Quick Start
 
 To quickly fork an existing network (e.g., Acala mainnet), run:
